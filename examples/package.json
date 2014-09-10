@@ -1,0 +1,20 @@
+{
+  "name": "examples",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "sjs -m ../index.js -r -l jsx-reader example.jsx -o out.js && ./node_modules/.bin/browserify out.js > bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "crm416",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.10.0",
+    "rcss": "^0.1.3"
+  },
+  "devDependencies": {
+    "browserify": "^4.1.8",
+    "sweet.js": "^0.7.1",
+    "jsx-reader": "^0.1.1"
+  }
+}

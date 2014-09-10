@@ -1,5 +1,7 @@
 # Output
 out.js
+examples/out.js
+examples/bundle.js
 
 # Logs
 logs

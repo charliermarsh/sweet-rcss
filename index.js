@@ -1,14 +1,9 @@
-var RCSS = require('rcss');
-
 macro rcss {
     rule {
-        .$param {$($id $[:] $val) (;) ...}
+        $param:ident {$($id $[:] $val) (;) ...}
     } => {
-        var $param = RCSS.registerClass({ $($id : $val,) ... });
+        var $param = require('rcss').registerClass({ $($id : $val,) ... }).className;
     }
 }
 
-rcss .hello {
-    color : "red";
-    width : 5
-}
+export rcss;
