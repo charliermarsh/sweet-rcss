@@ -13,7 +13,7 @@ For example:
 rcss red {
     backgroundColor: 'red'
 }
-# Becomes...
+// Becomes...
 var red = RCSS.registerClass({ backgroundColor: 'red' }).className;
 ```
 
