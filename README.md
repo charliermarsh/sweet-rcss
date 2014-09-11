@@ -10,11 +10,12 @@ An experiment in sweeting your JavaScript for use with [RCSS](https://github.com
 For example:
 
 ```js
-rcss red {
-    backgroundColor: 'red'
+rcss bigRed {
+    color: 'red';
+    fontSize: '32px'
 }
 // Becomes...
-var red = RCSS.registerClass({ backgroundColor: 'red' }).className;
+var bigRed = RCSS.registerClass({ color: 'red', fontSize: '32px' }).className;
 ```
 
 As a more complete example, you might have:
@@ -23,15 +24,16 @@ As a more complete example, you might have:
 var React = require('react');
 var RCSS = require('rcss');
 
-rcss red {
-    backgroundColor: 'red'
+rcss bigRed {
+    color: 'red';
+    fontSize: '32px'
 }
 
 RCSS.injectAll();
 
 var Component = React.createClass({
     render: function() {
-        return <div className={red}>
+        return <div className={bigRed}>
             Hello, world!
         </div>;
     }
