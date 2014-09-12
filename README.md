@@ -14,11 +14,29 @@ rcss bigRed {
     color: 'red';
     fontSize: '32px'
 }
-// Becomes...
+// ...becomes...
 var bigRed = RCSS.registerClass({ color: 'red', fontSize: '32px' }).className;
 ```
 
-As a more complete example, you might have:
+LESS-style mixins are also supported through the following syntax:
+
+```js
+rcss big {
+    fontSize: '32px';
+}
+
+rcss red {
+    color: 'red';
+}
+
+// bigRed implements both of the above styles
+rcss bigRed {
+    big;
+    red;
+}
+```
+
+The variables bound to `big` and `red` are the CSS classname that enforces their respective styles. As a more complete example, then, you might have:
 
 ```js
 var React = require('react');

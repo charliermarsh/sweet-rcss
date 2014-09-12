@@ -1,9 +1,17 @@
 var React = require('react');
 var RCSS = require('rcss');
 
-rcss bigRed {
+rcss big {
+    fontSize: '32px';
+}
+
+rcss red {
     color: 'red';
-    fontSize: '32px'
+}
+
+rcss bigRed {
+    big;
+    red;
 }
 
 RCSS.injectAll();
